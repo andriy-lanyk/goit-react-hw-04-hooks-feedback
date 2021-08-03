@@ -18,16 +18,16 @@ function App() {
         <FeedbackOptions
           options={"good"}
           onLeaveFeedback={() => {
-            setGood(good + 1);
+            setGood((prev) => prev + 1);
           }}
         />
         <FeedbackOptions
           options={"neutral"}
-          onLeaveFeedback={() => setNeutral(neutral + 1)}
+          onLeaveFeedback={() => setNeutral((prev) => prev + 1)}
         />
         <FeedbackOptions
           options={"bad"}
-          onLeaveFeedback={() => setBad(bad + 1)}
+          onLeaveFeedback={() => setBad((prev) => prev + 1)}
         />
       </Section>
       <Section title="Statistics">
